@@ -6,6 +6,9 @@ export function proxyImportResolver(source) {
     if (originalExt === "json") {
       return fullMatch;
     }
+    if (originalExt === "css") {
+      return fullMatch;
+    }
 
     return fullMatch.replace(".proxy.js", "");
   });
